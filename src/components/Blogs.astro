@@ -9,7 +9,7 @@
 
     <div class="cards">
       <div class="card">
-        <img src="https://seguros.elcorteingles.es/content/dam/eci-seguros/es/blog/blog-julio/si-me-dejo-el-grifo-abierto-cubre-el-seguro-los-danos.jpg">
+        <img src="https://seguros.elcorteingles.es/content/dam/eci-seguros/es/blog/blog-julio/si-me-dejo-el-grifo-abierto-cubre-el-seguro-los-danos.jpg" alt="Ahorra en casa">
         <h3>💧 Ahorra en casa</h3>
         <p>Cierra la llave mientras lavas los platos o cepillas los dientes, pequeñas acciones suman.</p>
         <a href="#" class="btn">Leer más</a>
@@ -33,95 +33,114 @@
 </section>
 
 <style>
-  .blogs {
-    padding: 5rem 2rem;
-    background: #e0f7fa;
-    color: #004d40;
-  }
+.blogs {
+  padding: 5rem 2rem;
+  background: #e0f7fa;
+  color: #004d40;
+  box-sizing: border-box;
+}
 
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-  }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
 
-  .blogs h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    color: #0077b6;
-  }
+.blogs h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
 
-  .blogs p {
-    font-size: 1.15rem;
-    margin-bottom: 3rem;
-  }
+.blogs p {
+  font-size: 1.15rem;
+  margin-bottom: 3rem;
+}
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  flex: 1 1 300px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box; /* Padding incluido en ancho */
+  padding-bottom: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 180px; /* Altura fija */
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem;
+  color: #0077b6;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0 1rem 1rem;
+  color: #004d40;
+  flex-grow: 1;
+}
+
+.card .btn {
+  margin: 0 1rem 1rem;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(135deg, #0077ff, #00bbff);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0; /* No se encoge */
+}
+
+.card .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .card {
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    flex: 1 1 300px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    height: 1100px;
   }
+  .card {
+    width: 100%; /* Ocupar todo el ancho en móviles */
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
+}
 
+/* Ajuste adicional para móviles muy pequeños */
+@media (max-width: 480px) {
   .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: 150px;
   }
-
-  .card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 1rem;
-    color: #0077b6;
-  }
-
-  .card p {
-    font-size: 1rem;
-    margin: 0 1rem 1rem;
-    color: #004d40;
-    flex-grow: 1;
-  }
-
-  .card .btn {
-    margin: 0 1rem 1rem;
-    padding: 0.6rem 1rem;
-    background: linear-gradient(135deg, #0077ff, #00bbff);
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: 600;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .card .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,123,255,0.4);
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .cards {
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-  }
+}
 </style>
