@@ -9,6 +9,8 @@ import Simulador from '../components/Simulador.astro';
 import Contacto from '../components/Contacto.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
+
+import AOS from "../components/AOS.astro";
 ---
 <style>
   * {
@@ -30,12 +32,13 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C0V8139NQT"></script>
-  <script is:inline>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-C0V8139NQT');
   </script>
+
 </head>
 <body>
   <Header />
@@ -47,5 +50,6 @@ import Layout from '../layouts/Layout.astro';
   <Simulador />
   <Contacto />
   <Footer />
+  <AOS />
 </body>
 </html>
