@@ -1,0 +1,137 @@
+---
+---
+<section class="simulador" id="simulador">
+  <div class="container">
+    <div class="simulador-content">
+      <div class="simulador-image">
+        <img src="https://www.siberzone.es/blog-sistemas-ventilacion/wp-content/uploads/2019/08/ahorrar-agua.jpg" alt="Ahorra agua">
+      </div>
+      <div class="simulador-form">
+        <h2>💧 Calcula tu ahorro de agua</h2>
+        <p>Ingresa tus hábitos y descubre cuánta agua puedes ahorrar cada día en Iguala.</p>
+        <form id="formSimulador">
+          <label for="grifos">Número de grifos que usas:</label>
+          <input type="number" id="grifos" min="1" value="1" required />
+
+          <label for="tiempo">Tiempo promedio de uso por grifo (minutos):</label>
+          <input type="number" id="tiempo" min="1" value="5" required />
+
+          <label for="veces">Veces que usas al día:</label>
+          <input type="number" id="veces" min="1" value="3" required />
+
+          <button type="submit" class="btn">Calcular ahorro</button>
+        </form>
+        <div id="resultado"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.simulador {
+  padding: 5rem 2rem;
+  background: #f0f8ff;
+  color: #003366;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.simulador-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.simulador-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.simulador-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.simulador-form h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0077b6;
+}
+
+.simulador-form p {
+  margin-bottom: 1.5rem;
+}
+
+.simulador-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.simulador-form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.simulador-form .btn {
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(135deg, #0077ff, #00bbff);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.simulador-form .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+}
+
+#resultado {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #004d40;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .simulador-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .simulador-image img {
+    max-width: 100%;
+  }
+}
+</style>
+
+<script is:inline>
+const form = document.getElementById('formSimulador');
+const resultado = document.getElementById('resultado');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const grifos = parseInt(document.getElementById('grifos').value);
+  const tiempo = parseInt(document.getElementById('tiempo').value);
+  const veces = parseInt(document.getElementById('veces').value);
+
+  // Supongamos que un grifo gotea 0.1 litros por minuto
+  const ahorro = grifos * tiempo * veces * 0.1;
+  
+  resultado.textContent = `💦 Puedes ahorrar aproximadamente ${ahorro.toFixed(2)} litros de agua al día.`;
+});
+</script>
