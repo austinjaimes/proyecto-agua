@@ -9,33 +9,43 @@ import Simulador from '../components/Simulador.astro';
 import Contacto from '../components/Contacto.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
 </style>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Salva Cada Gota</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salva Cada Gota</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C0V8139NQT"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C0V8139NQT');
+  </script>
 </head>
 <body>
-	<Header />
-	<Hero />
-	<Problema />
-	<ImagenTexto />
-	<Soluciones />
-	<Blogs />
-	<Simulador />
-	<Contacto />
-	<Footer />
+  <Header />
+  <Hero />
+  <Problema />
+  <ImagenTexto />
+  <Soluciones />
+  <Blogs />
+  <Simulador />
+  <Contacto />
+  <Footer />
 </body>
 </html>
