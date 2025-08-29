@@ -20,6 +20,7 @@ import AOS from "../components/AOS.astro";
   }
   body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
   }
 </style>
 
@@ -32,7 +33,7 @@ import AOS from "../components/AOS.astro";
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C0V8139NQT"></script>
-  <script>
+  <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
