@@ -1,0 +1,72 @@
+---
+// src/components/Header.astro
+---
+
+<header class="navbar">
+  <div class="container">
+    <h1 class="logo">💧 Salva Cada Gota</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Problema</a></li>
+        <li><a href="#">Soluciones</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    background: #0A2342; /* Azul profesional oscuro */
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4DD0E1; /* Azul agua más claro */
+    margin: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #4DD0E1;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
