@@ -2,7 +2,7 @@
 ---
 <section class="soluciones" id="soluciones">
   <div class="container">
-    <h2>💡 Cómo Puedes Ayudar en Iguala</h2>
+    <h2>¿Cómo Puedes Ayudar en Iguala?</h2>
     <p>
       Pequeñas acciones pueden hacer gran diferencia. Estas son formas en que
       todos podemos ahorrar agua y proteger nuestro recurso más valioso.
@@ -21,7 +21,7 @@
         <h3>💻 Comparte la campaña</h3>
         <p>Sigue nuestra campaña digital en Instagram y comparte consejos con tu comunidad (#SalvaCadaGotaIguala).</p>
       </div>
-      <div class="card">
+      <div class="card card-last">
         <h3>🌧 Captura agua de lluvia</h3>
         <p>Instala recipientes para recolectar agua de lluvia y úsala en riego o limpieza.</p>
       </div>
@@ -71,6 +71,7 @@
     transition: transform 0.3s, box-shadow 0.3s;
   }
 
+
   .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -90,9 +91,16 @@
 
   /* Responsive */
   @media (max-width: 768px) {
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .cards {
       flex-direction: column;
       gap: 1.5rem;
     }
+    
   }
 </style>
