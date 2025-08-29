@@ -1,0 +1,127 @@
+---
+---
+<section class="blogs" id="blogs">
+  <div class="container">
+    <h2>📝 Consejos y Blog</h2>
+    <p>
+      Descubre artículos y consejos prácticos para ahorrar agua y proteger este recurso vital en Iguala.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <img src="https://seguros.elcorteingles.es/content/dam/eci-seguros/es/blog/blog-julio/si-me-dejo-el-grifo-abierto-cubre-el-seguro-los-danos.jpg">
+        <h3>💧 Ahorra en casa</h3>
+        <p>Cierra la llave mientras lavas los platos o cepillas los dientes, pequeñas acciones suman.</p>
+        <a href="#" class="btn">Leer más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://media.admagazine.com/photos/618a623558ac69e38abb5f51/master/w_1600%2Cc_limit/81944.jpg" alt="Recolecta agua de lluvia">
+        <h3>🌧 Recolecta agua de lluvia</h3>
+        <p>Usa cubetas o sistemas sencillos para almacenar agua de lluvia y regar plantas o limpieza.</p>
+        <a href="#" class="btn">Leer más</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2020/12/ducha-2157861.jpg?tf=1200x900" alt="Ducha rápida">
+        <h3>🚿 Dúchate rápido</h3>
+        <p>Reducir el tiempo de la ducha ahorra cientos de litros de agua al mes.</p>
+        <a href="#" class="btn">Leer más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .blogs {
+    padding: 5rem 2rem;
+    background: #e0f7fa;
+    color: #004d40;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .blogs h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #0077b6;
+  }
+
+  .blogs p {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    flex: 1 1 300px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem;
+    color: #0077b6;
+  }
+
+  .card p {
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+    color: #004d40;
+    flex-grow: 1;
+  }
+
+  .card .btn {
+    margin: 0 1rem 1rem;
+    padding: 0.6rem 1rem;
+    background: linear-gradient(135deg, #0077ff, #00bbff);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+</style>

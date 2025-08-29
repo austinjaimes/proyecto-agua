@@ -1,19 +1,22 @@
 ---
-// src/components/Header.astro
 ---
-
 <header class="navbar">
   <div class="container">
-    <h1 class="logo">💧 Salva Cada Gota</h1>
+    <img class="logo" src="/unnamed.png" alt="Salva Cada Gota Logo">
     <nav>
       <ul class="nav-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Problema</a></li>
-        <li><a href="#">Soluciones</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#soluciones">Soluciones</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </header>
 
@@ -38,10 +41,13 @@
   }
 
   .logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4DD0E1; /* Azul agua más claro */
-    margin: 0;
+    height: 50px; /* Ajusta la altura del logo */
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
   }
 
   .nav-links {
@@ -60,13 +66,54 @@
   }
 
   .nav-links a:hover {
-    color: #4DD0E1;
+    color: #4DD0E1; /* Azul agua */
+  }
+
+  /* Menu toggle para móviles */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
   }
 
   /* Responsive */
   @media (max-width: 768px) {
     .nav-links {
       display: none;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #0A2342;
+      flex-direction: column;
+      width: 200px;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: flex;
     }
   }
 </style>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle?.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>

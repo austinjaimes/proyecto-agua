@@ -1,0 +1,88 @@
+---
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="logo">
+        💧 <span>Salva Cada Gota</span>
+      </div>
+      <div class="links">
+        <a href="#problema">Problema</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#contacto">Participa</a>
+      </div>
+      <div class="socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="copyright">
+      © 2025 Salva Cada Gota | Iguala, México
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #0A2342;
+    color: #e0f2ff;
+    padding: 3rem 2rem 1rem;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00bbff;
+  }
+
+  .logo span {
+    margin-left: 0.5rem;
+  }
+
+  .links a,
+  .socials a {
+    color: #e0f2ff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+  }
+
+  .links a:hover,
+  .socials a:hover {
+    color: #00bbff;
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+    color: #b2ebf2;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .links, .socials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>

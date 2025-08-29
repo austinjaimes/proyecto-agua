@@ -1,0 +1,82 @@
+---
+---
+<section class="imagen-texto" id="impacto">
+  <div class="container">
+    <div class="content">
+      <div class="imagen">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Escasez de agua">
+      </div>
+      <div class="texto">
+        <h2>💧 El impacto de la escasez de agua en Iguala</h2>
+        <p>
+          La escasez de agua afecta la vida cotidiana de los ciudadanos y el
+          ecosistema local. Con acciones simples podemos reducir el consumo,
+          proteger ríos y garantizar un futuro sostenible para nuestra ciudad.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .imagen-texto {
+    padding: 5rem 2rem;
+    background: #f0f8ff;
+    color: #004d40;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .imagen {
+    flex: 1;
+  }
+
+  .imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+
+  .texto {
+    flex: 1;
+  }
+
+  .texto h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #0077b6;
+  }
+
+  .texto p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .texto h2 {
+      font-size: 1.8rem;
+    }
+
+    .texto p {
+      font-size: 1rem;
+    }
+  }
+</style>
